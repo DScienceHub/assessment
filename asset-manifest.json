@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/assessment/static/css/main.9fda8f89.chunk.css",
+    "main.js": "/assessment/static/js/main.6f599d81.chunk.js",
+    "main.js.map": "/assessment/static/js/main.6f599d81.chunk.js.map",
+    "runtime-main.js": "/assessment/static/js/runtime-main.b266a40b.js",
+    "runtime-main.js.map": "/assessment/static/js/runtime-main.b266a40b.js.map",
+    "static/css/2.f926e83b.chunk.css": "/assessment/static/css/2.f926e83b.chunk.css",
+    "static/js/2.7a5b32a0.chunk.js": "/assessment/static/js/2.7a5b32a0.chunk.js",
+    "static/js/2.7a5b32a0.chunk.js.map": "/assessment/static/js/2.7a5b32a0.chunk.js.map",
+    "index.html": "/assessment/index.html",
+    "static/css/2.f926e83b.chunk.css.map": "/assessment/static/css/2.f926e83b.chunk.css.map",
+    "static/css/main.9fda8f89.chunk.css.map": "/assessment/static/css/main.9fda8f89.chunk.css.map",
+    "static/js/2.7a5b32a0.chunk.js.LICENSE.txt": "/assessment/static/js/2.7a5b32a0.chunk.js.LICENSE.txt",
+    "static/media/code.e8a04b13.png": "/assessment/static/media/code.e8a04b13.png",
+    "static/media/customize.5388cbbc.png": "/assessment/static/media/customize.5388cbbc.png",
+    "static/media/privacy.21c4dcb0.png": "/assessment/static/media/privacy.21c4dcb0.png",
+    "static/media/index.css": "/assessment/static/media/roboto-vietnamese-400-normal.52cebac0.woff2",
+    "static/media/sleek.befc3a0e.png": "/assessment/static/media/sleek.befc3a0e.png",
+    "static/media/track.9a1a5a73.png": "/assessment/static/media/track.9a1a5a73.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b266a40b.js",
+    "static/css/2.f926e83b.chunk.css",
+    "static/js/2.7a5b32a0.chunk.js",
+    "static/css/main.9fda8f89.chunk.css",
+    "static/js/main.6f599d81.chunk.js"
+  ]
+}
