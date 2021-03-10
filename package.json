@@ -1,11 +1,11 @@
 {
   "name": "assessment-landing",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "displayName": "Assessment Project",
   "description": "Landing page for Data Science Hub Assessment Project",
   "license": "Apache-2.0",
   "private": true,
-  "homepage": ".",
+  "homepage": "https://DScienceHub.github.io/assessment/",
   "main": "src/index.js",
   "author": {
     "name": "Data Science Hub",
@@ -49,14 +49,6 @@
     "hooks": {
       "pre-commit": "sync-dotenv && lint-staged"
     }
-  },
-  "renovate": {
-    "extends": [
-      "bliss"
-    ],
-    "baseBranches": [
-      "next"
-    ]
   },
   "stylelint": {
     "extends": "stylelint-config-standard"

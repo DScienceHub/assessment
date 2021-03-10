@@ -2,6 +2,7 @@ language: shell
 
 env:
   global:
+    # These are here because lint warnings error react-script builds
     - CI=false
     - DISABLE_ESLINT_PLUGIN=true
 
@@ -33,6 +34,6 @@ deploy:
     skip_cleanup: true
     file_glob: true
     file:
-      - "dist/**/*"
+      - "build/**/*"
     on:
       tags: true

@@ -4,8 +4,9 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
-import { Brightness4, Brightness7, Home } from '@material-ui/icons';
-import { Grid, Icon, Tooltip } from '@material-ui/core';
+import { Brightness4, Brightness7 } from '@material-ui/icons';
+import { Grid, Tooltip } from '@material-ui/core';
+import logoLight from '../assets/logo-lightBg.png';
 
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -14,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
   appBar: {
     marginTop: 0,
     backgroundColor: theme.palette.background.paper,
-    color: theme.palette.primary.A200,
+    color: theme.palette.text.primary,
     transition: theme.transitions.create(['margin', 'width'], {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
@@ -43,10 +44,10 @@ export default function AppTopBar(props) {
             justify={'space-between'}
           >
             <Grid item className={classes.row}>
-              <Home />
+              <img src={logoLight} />
             </Grid>
             <Grid item>
-              <Typography className={classes.title} variant="h6" noWrap>
+              <Typography variant="h6">
                 Data Science Hub Assessment Project
               </Typography>
             </Grid>

@@ -78,7 +78,7 @@ function App() {
       <Container className={classes.root} fluid maxWidth={'xl'} disableGutters>
         <AutoRotatingCarouselModal
           width={width}
-          height={height - 65}
+          height={height - 95}
           isMobile={matches}
         />
         <Typography variant={'h3'} className={classes.header}>

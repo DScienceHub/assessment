@@ -8,7 +8,6 @@ import { blue } from '@material-ui/core/colors';
 import './index.css';
 import 'fontsource-roboto';
 import App from './App';
-import { logger } from './common';
 import AppTopBar from './components/AppTopBar';
 
 import { ElevationScroll } from './components/TitlebarScroll';
