@@ -1,0 +1,136 @@
+{
+  "name": "assessment-landing",
+  "version": "0.1.0",
+  "displayName": "Assessment Project",
+  "description": "Landing page for Data Science Hub Assessment Project",
+  "license": "Apache-2.0",
+  "private": true,
+  "homepage": ".",
+  "main": "src/index.js",
+  "author": {
+    "name": "Data Science Hub",
+    "email": "datasciencehub@aucegypt.edu"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DataScience-Hub/assessment"
+  },
+  "keywords": [
+    "education",
+    "assessment",
+    "proctoring",
+    "exam"
+  ],
+  "scripts": {
+    "lint": "eslint --ignore-path .gitignore . && stylelint --ignore-path .gitignore --fix \"**/*.css\"",
+    "lint:fix": "eslint --ignore-path .gitignore --fix .",
+    "analyze": "source-map-explorer 'build/static/js/*.js'",
+    "react:start": "react-scripts start",
+    "react:build": "react-scripts build",
+    "react:test": "react-scripts test",
+    "react:eject": "react-scripts eject",
+    "clean:dist": "rimraf ./dist/*",
+    "clean:build": "rimraf ./build/*",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "devEngines": {
+    "node": ">=10.x",
+    "npm": ">=6.x",
+    "yarn": ">=1.21.3"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,scss,md}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "sync-dotenv && lint-staged"
+    }
+  },
+  "renovate": {
+    "extends": [
+      "bliss"
+    ],
+    "baseBranches": [
+      "next"
+    ]
+  },
+  "stylelint": {
+    "extends": "stylelint-config-standard"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version"
+    ]
+  },
+  "engines": {
+    "node": ">= 10",
+    "yarn": ">= 1.9"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.3.0",
+    "@fortawesome/fontawesome-svg-core": "^1.2.34",
+    "@fortawesome/free-brands-svg-icons": "^5.15.2",
+    "@fortawesome/free-solid-svg-icons": "^5.15.2",
+    "@fortawesome/react-fontawesome": "^0.1.14",
+    "@material-ui/core": "^4.11.3",
+    "@material-ui/data-grid": "^4.0.0-alpha.19",
+    "@material-ui/icons": "^4.11.2",
+    "@material-ui/lab": "^4.0.0-alpha.57",
+    "@material-ui/system": "^4.11.3",
+    "@material-ui/utils": "^4.11.2",
+    "app-root-path": "^3.0.0",
+    "async": "^3.2.0",
+    "axios": "^0.21.0",
+    "classnames": "^2.2.5",
+    "clsx": "^1.1.1",
+    "dotenv": "^8.2.0",
+    "fontsource-roboto": "^4.0.0",
+    "history": "4.10.1",
+    "js-yaml": "^4.0.0",
+    "material-auto-rotating-carousel": "^3.0.2",
+    "material-ui-dots": "^2.0.0",
+    "notistack": "^1.0.3",
+    "prop-types": "^15.7.2",
+    "pure-react-carousel": "^1.27.6",
+    "radium": "^0.26.0",
+    "react": "^17.0.1",
+    "react-awesome-slider": "^4.1.0",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^4.0.2",
+    "react-swipeable-views": "^0.13.9",
+    "react-swipeable-views-utils": "^0.13.3",
+    "sweetalert2": "^10.15.5",
+    "uuid": "^8.3.2",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "cross-env": "^7.0.2",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-only-warn": "^1.0.2",
+    "eslint-plugin-prettier": "^3.3.1",
+    "gh-pages": "^3.1.0",
+    "htmlhint": "^0.14.2",
+    "husky": "^4.3.8",
+    "jsonlint": "^1.6.3",
+    "lint-staged": "^10.5.4",
+    "prettier": "^2.2.1",
+    "rimraf": "^3.0.2",
+    "source-map-explorer": "^2.5.2",
+    "stylelint": "^13.11.0",
+    "stylelint-config-standard": "^20.0.0",
+    "sync-dotenv": "^2.6.2",
+    "wait-on": "^5.2.0"
+  }
+}

@@ -1,0 +1,38 @@
+language: shell
+
+env:
+  global:
+    - CI=false
+    - DISABLE_ESLINT_PLUGIN=true
+
+jobs:
+  include:
+    - name: "Build"
+      os: linux
+      dist: xenial
+      before_install:
+        - sudo apt-get update -y
+        - curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+        - sudo npm install --global yarn
+
+cache: yarn
+
+install:
+  - chmod a+x ./scripts/load_env.sh
+  - ./scripts/load_env.sh
+
+before_script:
+  - yarn install
+
+script:
+  - yarn run build
+
+deploy:
+  - provider: releases
+    api_key: $GITHUB_TOKEN
+    skip_cleanup: true
+    file_glob: true
+    file:
+      - "dist/**/*"
+    on:
+      tags: true
