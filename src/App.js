@@ -13,12 +13,11 @@ import {
   faLinux,
   faApple,
 } from '@fortawesome/free-brands-svg-icons';
-import Swal from 'sweetalert2';
 import { withStyles } from '@material-ui/core/styles';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
-import AutoRotatingCarouselModal from './components/Carousel';
+import Carousel from './components/Carousel';
 import useWindowDimensions from './hooks/useWindowDimensions';
 import awsClient from './model/client';
 
@@ -62,6 +61,7 @@ function App() {
   const [windowsDownload, setWindowsDownload] = useState(defaultVersion);
   const [macDownload, setMacDownload] = useState(defaultVersion);
   const [linuxDownload, setLinuxDownload] = useState(defaultVersion);
+  const [releaseNotes, setReleaseNotes] = useState(false);
   const matches = useMediaQuery('(max-width:600px)');
 
   useEffect(() => {
@@ -72,15 +72,90 @@ function App() {
     })();
   }, []);
 
+  const handleShowReleaseNotes = (os) => {
+    switch (os) {
+      case 'linux':
+        setReleaseNotes(linuxReleaseNotes());
+        break;
+      case 'windows':
+        setReleaseNotes(windowsReleaseNotes());
+        break;
+      case 'mac':
+        setReleaseNotes(macReleaseNotes());
+        break;
+    }
+  };
+
+  const macReleaseNotes = () => {
+    return (
+      <Grid item xs={12}>
+        <Typography variant={'h5'} className={classes.header}>
+          MacOS Notes
+        </Typography>
+        <ul className={classes.list}>
+          <Typography variant={'body1'}>
+            • Currently, MacOS client has no automatic updates. We are working
+            on adding update notifications and automatic delivery for Mac. If
+            you download the client now, please make sure to check back here
+            within a couple of weeks for an updated version that will have an
+            integrated solution for automatic updates.
+          </Typography>
+          <Typography variant={'body1'}>
+            • The application requires the following permissions on first
+            launch: <i>Webcam</i>, <i>Microphone</i>, <i>Desktop Capture</i>,{' '}
+            <i>Keystroke Capture</i>. Some permissions require admin
+            authorization and for the application to be restarted. Please grant
+            all permissions and restart the application when prompted in
+            settings.
+          </Typography>
+        </ul>
+      </Grid>
+    );
+  };
+
+  const linuxReleaseNotes = () => {
+    return (
+      <Grid item xs={12}>
+        <Typography variant={'h5'} className={classes.header}>
+          Linux Notes
+        </Typography>
+        <ul className={classes.list}>
+          <Typography variant={'body1'}>
+            • Linux client has been tested and known to work on Debian and
+            Fedora based distributions. If you have a different distribution you
+            can try the client and let us know if you run into any issues.
+          </Typography>
+          <Typography variant={'body1'}>
+            • The client requires no special permissions to work.
+          </Typography>
+        </ul>
+      </Grid>
+    );
+  };
+
+  const windowsReleaseNotes = () => {
+    return (
+      <Grid item xs={12}>
+        <Typography variant={'h5'} className={classes.header}>
+          Windows Notes
+        </Typography>
+        <ul className={classes.list}>
+          <Typography variant={'body1'}>
+            • Windows client requires firewall permissions on first launch.
+            Please be sure to grant firewall access to both public and private
+            networks when prompted to do so when the application starts for the
+            first time.
+          </Typography>
+        </ul>
+      </Grid>
+    );
+  };
+
   return (
     <React.Fragment>
       <CssBaseline />
-      <Container className={classes.root} fluid maxWidth={'xl'} disableGutters>
-        <AutoRotatingCarouselModal
-          width={width}
-          height={height - 95}
-          isMobile={matches}
-        />
+      <Container className={classes.root} maxWidth={'xl'} disableGutters>
+        <Carousel width={width} height={height - 68} isMobile={matches} />
         <Typography variant={'h3'} className={classes.header}>
           Download
         </Typography>
@@ -98,6 +173,9 @@ function App() {
                   disableRipple
                   size={'large'}
                   href={windowsDownload.url}
+                  onClick={() => {
+                    handleShowReleaseNotes('windows');
+                  }}
                 >
                   <FontAwesomeIcon icon={faWindows} size={'6x'} />
                 </DownloadButton>
@@ -119,11 +197,7 @@ function App() {
                   size={'large'}
                   href={macDownload.url}
                   onClick={() => {
-                    Swal.fire(
-                      'No Auto Updates',
-                      'Currently, MacOS client has no automatic updates. We are working on adding update notifications and automatic delivery for Mac. If you download the client now, please make sure to check back here within a couple of weeks for an updated version that will have an integrated solution for automatic updates.',
-                      'info'
-                    );
+                    handleShowReleaseNotes('mac');
                   }}
                 >
                   <FontAwesomeIcon icon={faApple} size={'6x'} />
@@ -145,6 +219,9 @@ function App() {
                   disableRipple
                   size={'large'}
                   href={linuxDownload.url}
+                  onClick={() => {
+                    handleShowReleaseNotes('linux');
+                  }}
                 >
                   <FontAwesomeIcon icon={faLinux} size={'6x'} />
                 </DownloadButton>
@@ -157,6 +234,7 @@ function App() {
               </Typography>
             </Container>
           </Grid>
+          {releaseNotes}
         </Grid>
         <Divider className={classes.divider} />
         <Typography variant={'h4'} className={classes.header}>

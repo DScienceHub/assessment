@@ -6,6 +6,7 @@ import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import { Brightness4, Brightness7 } from '@material-ui/icons';
 import { Grid, Tooltip } from '@material-ui/core';
+import PropTypes from 'prop-types';
 import logoLight from '../assets/logo-lightBg.png';
 
 const useStyles = makeStyles((theme) => ({
@@ -29,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function AppTopBar(props) {
+function AppTopBar(props) {
   const { theme, onThemeChange } = props;
   const classes = useStyles();
 
@@ -43,8 +44,8 @@ export default function AppTopBar(props) {
             alignItems={'center'}
             justify={'space-between'}
           >
-            <Grid item className={classes.row}>
-              <img src={logoLight} />
+            <Grid item>
+              <img src={logoLight} width={60} />
             </Grid>
             <Grid item>
               <Typography variant="h6">
@@ -68,3 +69,10 @@ export default function AppTopBar(props) {
     </div>
   );
 }
+
+AppTopBar.propTypes = {
+  theme: PropTypes.string,
+  onThemeChange: PropTypes.func,
+};
+
+export default AppTopBar;

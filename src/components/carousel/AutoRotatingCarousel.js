@@ -98,7 +98,6 @@ const styles = {
   carouselContainer: {
     height: '100%',
   },
-  closed: {},
 };
 
 class AutoRotatingCarousel extends Component {
@@ -155,9 +154,6 @@ class AutoRotatingCarousel extends Component {
       label,
       landscape: landscapeProp,
       mobile,
-      ModalProps,
-      open,
-      onClose,
       onStart,
     } = this.props;
     const landscape = mobile && landscapeProp;
