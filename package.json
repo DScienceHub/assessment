@@ -1,6 +1,6 @@
 {
   "name": "assessment-landing",
-  "version": "0.1.2",
+  "version": "0.1.6",
   "displayName": "Assessment Project",
   "description": "Landing page for Data Science Hub Assessment Project",
   "license": "Apache-2.0",
@@ -96,6 +96,7 @@
     "react": "^17.0.1",
     "react-awesome-slider": "^4.1.0",
     "react-dom": "^16.13.1",
+    "react-markdown": "^6.0.2",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^4.0.2",
     "react-swipeable-views": "^0.13.9",

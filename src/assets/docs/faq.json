@@ -1,0 +1,50 @@
+{
+  "General": [
+    {
+      "title": "How do I report an error?",
+      "content": "From the application menu select Help > Report Issue"
+    },
+    {
+      "title": "How do I submit feedback?",
+      "content": "From the application menu select Help > Submit Feedback"
+    },
+    {
+      "title": "Who views my data?",
+      "content": "The data is used in automated systems to improve our models, and the application's ability to detect cheating as well as AI features.\nYour data is handled in accordance with ethical research best practices and AUC's rules and regulations.\nIn instances when necessary, data may be viewed by members of our team with due care and in accordance with research rules."
+    },
+    {
+      "title": "Can I try out the application without participating in research?",
+      "content": "Yes! From the application menu select Research > Start Demo and choose either 'Research - Offline' or 'Showcase - Offline' option for a disconnected demo.\nPlease be aware that automatic error reporting remains active. The only data that will be communicated to us is diagnostic error data in case you encounter any."
+    }
+  ],
+  "MacOS": [
+    {
+      "title": "Application cannot be opened because the developer cannot be verified",
+      "content": "This warning appears as our Mac client is not yet signed and certified by Apple as it is experimental software.\nTo allow running on your device go to System Preferences > Security & Privacy > Click 'Open Anyway'.\nFor more information about this warning see [Apple Support](https://support.apple.com/en-us/HT202491)",
+      "attachments": [
+        "macUnverifiedWarning",
+        "macOpenAnyway"
+      ]
+    }
+  ],
+  "Windows": [
+    {
+      "title": "Windows protected your PC error when installing",
+      "content": "This warning is due to the fact that our application has not yet been certified by Microsoft as it is still experimental.\nTo allow the application to install, click the 'More Info' link in the dialog then click the 'Run Anyway' button",
+      "attachments": [
+        "smartscreenBase",
+        "smartscreenRun"
+      ]
+    }
+  ],
+  "Linux": [
+    {
+      "title": "Is my distro supported",
+      "content": "The application is distributed as a portable and self-contained AppImage and should run on most major distributions.\nIt has been tested and is known to work on Debian, Fedora, Arch, Slack and their derivatives.\nCheck [AppImage FAQ](https://docs.appimage.org/user-guide/faq.html) for more information."
+    },
+    {
+      "title": "Application won't start",
+      "content": "Please make sure to make the AppImage executable using GUI properties or 'chmod a+x <filename>' from terminal."
+    }
+  ]
+}

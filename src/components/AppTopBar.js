@@ -7,7 +7,7 @@ import Typography from '@material-ui/core/Typography';
 import { Brightness4, Brightness7 } from '@material-ui/icons';
 import { Grid, Tooltip } from '@material-ui/core';
 import PropTypes from 'prop-types';
-import logoLight from '../assets/logo-lightBg.png';
+import logoLight from '../assets/images/logo-lightBg.png';
 
 const useStyles = makeStyles((theme) => ({
   grow: {

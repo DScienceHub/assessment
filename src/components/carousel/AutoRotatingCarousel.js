@@ -155,6 +155,7 @@ class AutoRotatingCarousel extends Component {
       landscape: landscapeProp,
       mobile,
       onStart,
+      open,
     } = this.props;
     const landscape = mobile && landscapeProp;
     const transitionDuration = {
