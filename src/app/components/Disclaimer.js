@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Container } from '@material-ui/core';
 import ReactMarkdown from 'react-markdown';
-import disclaimer from '../assets/docs/disclaimer.md';
+import disclaimer from '../../assets/docs/disclaimer.md';
 
 function Disclaimer(props) {
   const { ...forwardProps } = props;

@@ -1,54 +1,46 @@
 import ReactDOM from 'react-dom';
-import React, { useState } from 'react';
-import { SnackbarProvider } from 'notistack';
+import React from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import { createMuiTheme, ThemeProvider } from '@material-ui/core';
-import { blue } from '@material-ui/core/colors';
 
 import './index.css';
 import 'fontsource-roboto';
-import App from './App';
-import AppTopBar from './components/AppTopBar';
-
-import { ElevationScroll } from './components/TitlebarScroll';
+import App from './app/App';
+import { createMuiTheme, ThemeProvider } from '@material-ui/core';
+import blue from '@material-ui/core/colors/blue';
+import { SnackbarProvider } from 'notistack';
 
 function Index() {
-  const [selectedTheme, setSelectedTheme] = useState('light');
-
-  const handleThemeChange = () => {
-    if (selectedTheme === 'light') setSelectedTheme('dark');
-    else setSelectedTheme('light');
-  };
-
-  const theme = React.useMemo(
-    () =>
-      createMuiTheme({
-        palette: {
-          primary: blue,
-          type: selectedTheme,
+  const theme = createMuiTheme({
+    palette: {
+      primary: blue,
+      type: 'light',
+      background: {
+        default: '#E0E0E0',
+      },
+    },
+    overrides: {
+      MuiCssBaseline: {
+        '@global': {
+          html: {
+            WebkitFontSmoothing: 'auto',
+          },
         },
-      }),
-    [selectedTheme]
-  );
+      },
+    },
+  });
 
   return (
     <React.StrictMode>
       <CssBaseline />
       <ThemeProvider theme={theme}>
         <SnackbarProvider
-          maxSnack={1}
+          maxSnack={5}
           preventDuplicate
           anchorOrigin={{
             vertical: 'top',
             horizontal: 'center',
           }}
         >
-          <ElevationScroll>
-            <AppTopBar
-              theme={selectedTheme}
-              onThemeChange={handleThemeChange}
-            />
-          </ElevationScroll>
           <App />
         </SnackbarProvider>
       </ThemeProvider>

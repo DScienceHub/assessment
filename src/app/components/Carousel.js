@@ -5,11 +5,11 @@ import Slide from './carousel/Slide';
 import { Box, CssBaseline } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
-import sleek from '../assets/images/sleek.png';
-import track from '../assets/images/track.png';
-import customize from '../assets/images/customize.png';
-import code from '../assets/images/code.png';
-import privacy from '../assets/images/privacy.png';
+import sleek from '../../assets/images/sleek.png';
+import track from '../../assets/images/track.png';
+import customize from '../../assets/images/customize.png';
+import code from '../../assets/images/code.png';
+import privacy from '../../assets/images/privacy.png';
 
 const useStyles = makeStyles((theme) => ({
   image: {

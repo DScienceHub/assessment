@@ -1,5 +1,6 @@
 import winston from 'winston';
-
+import { createBrowserHistory } from 'history';
+const history = createBrowserHistory();
 const logger = winston.createLogger({
   level: 'info',
   format: winston.format.json(),
@@ -11,4 +12,4 @@ const logger = winston.createLogger({
   ],
 });
 
-export { logger };
+export { logger, history };

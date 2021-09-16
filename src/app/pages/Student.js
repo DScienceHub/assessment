@@ -14,12 +14,12 @@ import {
 import Typography from '@material-ui/core/Typography';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 
-import DownloadCard from './components/DownloadCard';
-import Disclaimer from './components/Disclaimer';
-import Carousel from './components/Carousel';
-import useWindowDimensions from './hooks/useWindowDimensions';
-import awsClient from './model/client';
-import FAQ from './components/FAQ';
+import DownloadCard from '../components/DownloadCard';
+import Disclaimer from '../components/Disclaimer';
+import Carousel from '../components/Carousel';
+import useWindowDimensions from '../hooks/useWindowDimensions';
+import awsClient from '../model/client';
+import FAQ from '../components/FAQ';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -43,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function App() {
+function Student() {
   const classes = useStyles();
   const defaultVersion = { url: '', version: '', date: '' };
   const { width, height } = useWindowDimensions();
@@ -121,4 +121,4 @@ function App() {
   );
 }
 
-export default App;
+export default Student;

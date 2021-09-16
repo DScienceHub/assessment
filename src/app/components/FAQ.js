@@ -9,11 +9,11 @@ import withStyles from '@material-ui/core/styles/withStyles';
 import PropTypes from 'prop-types';
 import ReactMarkdown from 'react-markdown';
 
-import questions from '../assets/docs/faq.json';
-import smartscreenBase from '../assets/images/smartscreenBase.png';
-import smartscreenRun from '../assets/images/smartscreenRun.png';
-import macUnverifiedWarning from '../assets/images/macUnverifiedWarning.png';
-import macOpenAnyway from '../assets/images/macOpenAnyway.png';
+import questions from '../../assets/docs/faq.json';
+import smartscreenBase from '../../assets/images/smartscreenBase.png';
+import smartscreenRun from '../../assets/images/smartscreenRun.png';
+import macUnverifiedWarning from '../../assets/images/macUnverifiedWarning.png';
+import macOpenAnyway from '../../assets/images/macOpenAnyway.png';
 import { makeStyles } from '@material-ui/core/styles';
 
 const attachments = {
