@@ -1,7 +1,7 @@
 # Data Science Hub Assessment Project Page
 
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
-[![GitHub Super-Linter](https://github.com/DScienceHub/assessment/actions/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/marketplace/actions/super-linter)
+[![GitHub Super-Linter](https://github.com/DScienceHub/assessment/actions/workflows/lint.yml/badge.svg)](https://github.com/DScienceHub/assessment/actions/workflows/lint.yml)
 [![Build](https://github.com/DScienceHub/assessment/actions/workflows/build.yml/badge.svg)](https://github.com/DScienceHub/assessment/actions/workflows/build.yml)
 
 # Description
