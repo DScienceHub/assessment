@@ -1,12 +1,12 @@
 # Data Science Hub Assessment Project Page
 
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
-[![GitHub Super-Linter](https://github.com/DScienceHub/assessment/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/marketplace/actions/super-linter)
+[![GitHub Super-Linter](https://github.com/DScienceHub/assessment/actions/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/marketplace/actions/super-linter)
 [![Build](https://github.com/DScienceHub/assessment/actions/workflows/build.yml/badge.svg)](https://github.com/DScienceHub/assessment/actions/workflows/build.yml)
 
 # Description
 
-The landing page for the Data Science Hub Assessment project (Dr. Proctor).
+The landing page for the Data Science Hub Assessment project, Dr. Proctor.
 
 ## Development
 
@@ -16,7 +16,7 @@ Find an example for needed environment variables in `.env.example`. Make sure to
 `.env` file before starting or building.
 
 Also remember when adding or updating environment variables to make the changes
-in [.github/workflows/build.yml] and add the proper secrets to the repository.
+in [build action](.github/workflows/build.yml) and add the proper secrets to the repository.
 Make sure to load env variables in the action and add to secrets
 before triggering builds. The builds do not error if variables
 are missing. Instead, a non-working build will be produced.
@@ -41,7 +41,7 @@ All related libraries and tools are installed with `yarn install --dev`
 ### Releasing
 
 The project is set up with a CD release github action. To release a new version:
-1. Increment the version in [package.json] to the desired version.
+1. Increment the version in [package.json](package.json) to the desired version.
 2. Create a tag with the desired version `git tag v*.*.*`.
 3. Push the tag to remote `git push --tags`.
 
